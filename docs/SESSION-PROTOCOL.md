@@ -6,7 +6,7 @@ This document records how work in this repository is planned, handed off and aut
 
 ### 1. Decided means in the repo
 
-A decision exists only once it is in the repo, as a decision record, a roadmap line or an issue. Brainstorming in chat is not a decision. Each stretch of planning ends with a promotion step that moves what is settled into the repo. Only decisions the owner has explicitly confirmed are promoted, and each one uses the same shape: decision, reason, alternatives rejected and revisit trigger. Everything else stays in chat.
+A decision exists only once it is in the repo, as a decision record, a roadmap line or a GitHub issue ([0008](decisions/0008-github-issues-for-personal-projects.md)). Brainstorming in chat is not a decision. Each stretch of planning ends with a promotion step that moves what is settled into the repo. Only decisions the owner has explicitly confirmed are promoted, and each one uses the same shape: decision, reason, alternatives rejected and revisit trigger. Everything else stays in chat. Decision records live in [docs/decisions/](decisions/README.md). A change that alters what a record decides is a reversal: it gets a new record, and the old record's status becomes "Superseded by NNNN" with a link to the new one; the old record's text is otherwise left as it was. Any other change, such as to the reason, wording, gaps or revisit trigger, is made in place.
 
 ### 2. Build handoffs from the repo
 
@@ -30,8 +30,8 @@ No rule in this document is enforced by tooling yet; each is a convention, and t
 | Write a handoff for a new chat | owner and chat | none | a script that measures repo state with git and appends the owner's intent lines |
 | Write each repo-agent prompt | chat | none | a prompt template that fixes the opening sentence, rules and report format |
 | Review the agent's report for unverified claims | owner and chat | none | a report checklist |
-| Write the PR title and body | agent | partly: the agent writes it using fixed section headings; no template file yet | a PR template file |
+| Write the PR title and body | agent | partly: the agent writes it from instructions in each prompt; no template file or agent-rules file yet | a PR template file |
 | Create and configure a new repository (ruleset, merge settings, credentials) | owner | none; done by hand once so far | an exported ruleset file plus a script the owner runs from their own shell |
-| Review, push and merge | owner | none, by design | none: the owner reads every change |
+| Review, push and merge | owner: pushes from the host shell over SSH with the repo's deploy key ([0003](decisions/0003-credentials-and-identities.md)); merges by rebase only ([0001](decisions/0001-rebase-only-merges.md)) | none for the owner's review; the merge method is enforced by the protect-main ruleset ([0001](decisions/0001-rebase-only-merges.md)) | none: the owner reads every change |
 
 This file is the one home for the session protocol. Other documents link to it instead of repeating it.
