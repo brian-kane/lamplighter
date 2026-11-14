@@ -1,6 +1,6 @@
 # 0010: Agents push branches and open pull requests in personal repos
 
-Status: Accepted
+Status: Accepted; the push credential is changed by [0011](0011-agent-token-may-push.md) for repos with no deploy key
 
 Date: 2026-11-14
 
