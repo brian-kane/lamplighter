@@ -1,6 +1,6 @@
 # 0003: Credentials and identities
 
-Status: Accepted
+Status: Accepted; partly superseded by [0010](0010-agents-open-pull-requests.md) for personal repos whose CLAUDE.md allows agent pull requests
 
 Date: 2026-10-16
 
