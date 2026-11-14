@@ -30,8 +30,8 @@ No rule in this document is enforced by tooling yet; each is a convention, and t
 | Write a handoff for a new chat | owner and chat | none | a script that measures repo state with git and appends the owner's intent lines |
 | Write each repo-agent prompt | chat | none | a prompt template that fixes the opening sentence, rules and report format |
 | Review the agent's report for unverified claims | owner and chat | none | a report checklist |
-| Write the PR title and body | agent | partly: the agent writes it from instructions in each prompt; no template file or agent-rules file yet | a PR template file |
+| Write the PR title and body | agent | partly: shared rules in [agents/shared-rules.md](../agents/shared-rules.md); a PR template only in repos that have one | a PR template file in each repo |
 | Create and configure a new repository (ruleset, merge settings, credentials) | owner | none; done by hand once so far | an exported ruleset file plus a script the owner runs from their own shell |
-| Review, push and merge | owner: pushes from the host shell over SSH with the repo's deploy key ([0003](decisions/0003-credentials-and-identities.md)); merges by rebase only ([0001](decisions/0001-rebase-only-merges.md)) | none for the owner's review; the merge method is enforced by the protect-main ruleset ([0001](decisions/0001-rebase-only-merges.md)) | none: the owner reads every change |
+| Review, push and merge | owner: pushes from the host shell over SSH with the repo's deploy key ([0003](decisions/0003-credentials-and-identities.md)), except where the agent pushes its branch and opens a draft PR ([0010](decisions/0010-agents-open-pull-requests.md)); merges by rebase only ([0001](decisions/0001-rebase-only-merges.md)) | none for the owner's review; the merge method is enforced by the protect-main ruleset ([0001](decisions/0001-rebase-only-merges.md)) | none: the owner reads every change |
 
 This file is the one home for the session protocol. Other documents link to it instead of repeating it.
