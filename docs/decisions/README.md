@@ -13,4 +13,5 @@ Each file here is an architecture decision record (ADR). How records are written
 | 0007 | [One documentation standard in every repo I work in](0007-one-documentation-standard.md) | Accepted |
 | 0008 | [GitHub Issues for personal projects](0008-github-issues-for-personal-projects.md) | Accepted |
 | 0009 | [The reviewer is advisory](0009-reviewer-is-advisory.md) | Accepted |
-| 0010 | [Agents push branches and open pull requests in personal repos](0010-agents-open-pull-requests.md) | Accepted |
+| 0010 | [Agents push branches and open pull requests in personal repos](0010-agents-open-pull-requests.md) | Accepted; push credential changed by 0011 |
+| 0011 | [The agent's token may push where a repo has no deploy key](0011-agent-token-may-push.md) | Accepted |
