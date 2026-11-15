@@ -6,7 +6,8 @@ These apply in every repo. Repo-specific rules live in each repo's own CLAUDE.md
 - Never merge, and never push `main`. Push your own branch and open a draft PR only where the repo's CLAUDE.md allows it ([0010](../docs/decisions/0010-agents-open-pull-requests.md)); everywhere else, never push.
 - Use no credentials beyond the push and `gh` access the repo's CLAUDE.md allows.
 - Never run anything against production or shared environments.
-- Ask before changing CI, hooks, rulesets, or credential configuration.
+- Ask before changing CI, hooks, rulesets, or credential configuration, unless the issue or prompt's task is to change them.
+- Add no dependency without asking first; say what it replaces and why building it isn't better.
 - Work on a branch. You may rewrite your own unpushed branch, never main or a pushed branch.
 - Stop only processes you started, by PID.
 
@@ -45,6 +46,7 @@ These apply in every repo. Repo-specific rules live in each repo's own CLAUDE.md
 
 ## Checks
 - A new check is proven by a planted failure: a deliberately broken input it must reject.
+- A behavior change comes with a test that fails without it.
 
 ## Reports
 - Summary first, then details.
