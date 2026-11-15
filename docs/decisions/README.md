@@ -15,3 +15,4 @@ Each file here is an architecture decision record (ADR). How records are written
 | 0009 | [The reviewer is advisory](0009-reviewer-is-advisory.md) | Accepted |
 | 0010 | [Agents push branches and open pull requests in personal repos](0010-agents-open-pull-requests.md) | Accepted; push credential changed by 0011 |
 | 0011 | [The agent's token may push where a repo has no deploy key](0011-agent-token-may-push.md) | Accepted |
+| 0012 | [Agents may change CI when asked, add no dependency unasked, and test behavior changes](0012-agent-rules-ci-dependencies-tests.md) | Accepted |
